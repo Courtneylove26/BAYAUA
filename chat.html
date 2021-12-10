@@ -1,0 +1,188 @@
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial=scale=1.0">
+	<title>BUBBLYWAYJC LAUNDRY SHOP</title>
+	
+    <!-- font aweasome cdn -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+	
+	<!-- custom css file link -->
+	<link rel = "stylesheet" href = "./CSS/style.css">			
+</head>
+
+<body>		
+	
+<!-- header section starts -->
+
+<header>
+	
+	<input type="checkbox" name="" id="toggler">
+	<label for="toggler" class="fas fa-bars"></label> 
+
+	<a href="https://www.facebook.com/Bubblywayjc/" class= "logo">BUBBLYWAYJC<span>.</span></a>	
+	
+	<nav class= "navbar">
+		<a href= "Index.html">Home</a>
+		<a href= "About Us.html">About</a>
+		<a href= "Services.html">Services</a>
+		<a href= "Pricelist.html">Pricelist</a>
+		<a href= "Gallery.html">Gallery</a>
+		<a href= "Contact.html">Contact</a>
+		<a href= "Review.html">Review</a>
+	</nav>
+	
+	<div class= "icons">
+		<a href="chat.html" class="fa fa-comments"></a>
+	</div>
+		
+</header>
+<!-- header section ends -->
+ <style>
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+    background-color: paleturquoise;
+}
+.box{
+    width: 490px;
+    height: 350px;
+    box-shadow: 5px 5px 20px #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+}
+.top{
+    width: 100%;
+    height: 80px;
+    background: #a2d2ff;;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.top h1{
+    margin: 0;
+    font-size: 30px;
+    color: #2D46B9;
+    text-align: center;
+    padding-top: 10px;
+    font-family: sans-serif;
+}
+
+
+.mid{
+    width: 100%;
+    height: 230px;
+    background: #FEF9EF;
+}
+.mid .chat{
+    width: 100%;
+}
+.mid .chat h2{
+    margin: 0;
+    font-size: 30px;
+    color: #000;
+    padding:30px 20px;
+    text-align: center;
+}
+.mid .chat p{
+    margin: 0;
+    height: 30px;
+    font-size: 28px;
+    color:#2D46B9;
+    text-align: center;
+    background-color: #FEF9EF;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+.input{
+    height:100%;
+    width: 489px;
+    overflow: hidden;
+}
+.input input{
+    width: 100%;
+    height: 110px;
+    outline: none;
+    border: none;
+    padding-left: 30px;
+    padding-top:0;
+    font-family: monospace;
+    font-size: 50px;
+    background: #009DAE;
+}
+    </style>
+</head>
+<body>
+
+    <div class="box">
+<div style="text-align: center;" class="top">
+    <h1>Send A Question!</h1>
+    <strong><p>Please type this: services offered, purified bottled available, globe number, smart number,
+    location.
+    </p></strong>
+</div>
+<div class="mid">
+    <div class="chat">
+        <h2>Answers Are Below:</h2>
+        <p id="chatLog">Let's Chat!</p>
+    </div>
+</div>
+    <div class="input">
+    <input type="text" id="userBox"onkeydown="if(event.keyCode == 13){ talk() }"placeholder="Type A Message">
+    </div>
+    </div>
+
+    <script>
+function talk(){
+    var know ={
+        "Services Offered":" Wash, Soak, Dry, Fold, Comforter",
+        "services offered":" wash, soak, dry, fold, comforter",
+
+        "purified bottled available":" 295ml, 500ml, and 1 Liter",
+        "Purified Bottled Available":" 295ml, 500ml, and 1 Liter",
+
+        "Globe Number":"(0945) 085 9599",
+        "Smart Number":"(0949) 103 8368",
+
+        "globe number":"(0945) 085 9599",
+        "smart number":"(0949) 103 8368",
+
+        "location":"3631 Gen. Luna St. Bangkal, 1233 Makati, Philippines",
+        "Location":"3631 Gen. Luna St. Bangkal, 1233 Makati, Philippines",
+
+        "Hi":" Hello",
+        "hi":" hello",
+
+        "How Are You?":"Great !",
+        "how are you?":"great !",
+
+        "Bye":"Have A Nice Day !",
+        "bye":"have a nice day !",
+
+        "hello":"hi , whats up",
+        "Hello":"Hi , Whats Up"
+    };
+    var user = document.getElementById('userBox').value;
+    document.getElementById('chatLog').innerHTML = user + "<br>";
+    if(user in know){
+        document.getElementById('chatLog').innerHTML = know[user] + "<br>";
+    }else{
+        document.getElementById('chatLog').innerHTML = "I do not understand .";
+    }
+}
+    </script>
+
+
+
+</body>
+</html>
+
